@@ -6,8 +6,8 @@ Xcode has some tricks that Sublime doesn't, and the other way around is true too
 Default:  
 <img src="https://raw.githubusercontent.com/braver/XcodeColors/master/images/Default.png" width="530" height="160">
 
-Dusk:
+Dusk:  
 <img src="https://raw.githubusercontent.com/braver/XcodeColors/master/images/Dusk.png" width="530" height="160">
 
-Civic:
+Civic:  
 <img src="https://raw.githubusercontent.com/braver/XcodeColors/master/images/Civic.png" width="530" height="160">
