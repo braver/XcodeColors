@@ -3,177 +3,193 @@
     "author": "Koen Lageveen, inspired by Apple",
     "variables":
     {
-        "white":      "#FFF",
-        "black":      "#000",
-        "grey":       "#D6D6D6",  // invisibles
-        "whitedark":  "color(var(white) blend(var(grey) 86%))",
-        "blacklight": "color(var(black) blend(var(white) 64%))",
-        "green":      "#008400",  // comments, documentation (keywords bold)
-        "red":        "#D12F1B",  // strings
-        "blue":       "#272AD8",  // characters, numbers
-        "darkblue":   "#1337FF",  // urls
-        "pink":       "#BA2DA2",  // keywords
-        "brown":      "#78492A",  // preprocessor statements, preprocessor macros
-        "lightbrown": "#957E35",  // attributes
-        "bondi":      "#4F8187",  // project class names, type names, instance vars, globals
-        "darkbondi":  "#31595D",  // project functions and method names, project constants
-        "purple":     "#703DAA",  // other class names, type names, vars, globabls
-        "darkpurple": "#3E1E81",  // other functions and method names, constants
+        "plain_text"                    : "#000",     // black
+        "comments"                      : "#008400",  // green
+        "documentation_markup"          : "#008400",  // green
+        "documentation_markup_keywords" : "#008400",  // green
+        "strings"                       : "#D12F1B",  // red
+        "characters"                    : "#272AD8",  // blue
+        "numbers"                       : "#272AD8",  // blue
+        "keywords"                      : "#BA2DA2",  // pink
+        "preprocessor_statements"       : "#78492A",  // dark brown
+        "urls"                          : "#1337FF",  // hot blue
+        "attributes"                    : "#957E35",  // light brown
+        "project_class_names"           : "#4F8187",  // light bondi
+        "project_method_names"          : "#31595D",  // dark bondi
+        "project_constants"             : "#31595D",  // dark bondi
+        "project_type_names"            : "#4F8187",  // light bondi
+        "project_variables"             : "#4F8187",  // light bondi
+        "project_preprocessor_macros"   : "#78492A",  // dark brown
+        "other_class_names"             : "#703DAA",  // purple
+        "other_method_names"            : "#3E1E81",  // light purple
+        "other_constants"               : "#3E1E81",  // light purple
+        "other_type_names"              : "#703DAA",  // purple
+        "other_variables"               : "#703DAA",  // purple
+        "other_preprocessor_macros"     : "#78492A",  // dark brown
+
+        "background"                    : "#FFF",     // white
+        "current_line"                  : "#EDF5FF",  // brighter blue
+        "selection"                     : "#B2D7FF",  // bright blue
+        "cursor"                        : "#000",     // black
+        "invisibles"                    : "#D6D6D6",  // grey
+
+        "embedded": "color(var(background) blend(var(invisibles) 86%))",
+        "invalid": "var(strings)",
     },
     "globals":
     {
-        "foreground": "var(black)",
-        "background": "var(white)",
-        "caret": "var(black)",
-        "line_highlight": "#EDF5FF",
-        "selection": "#B2D7FF",
-        "selection_border": "color(#B2D7FF blend(var(black) 92%)",
-        "inactive_selection": "color(#B2D7FF blend(var(white) 72%)",
-        "misspelling": "var(red)",
-        "shadow": "color(var(white) blend(var(black) 50%))"
+        "foreground": "var(plain_text)",
+        "background": "var(background)",
+        "caret": "var(cursor)",
+        "line_highlight": "var(current_line)",
+        "selection": "var(selection)",
+        "selection_border": "color(var(selection) blend(#000 92%)",
+        "inactive_selection": "color(var(selection) blend(var(background) 72%)",
+        "misspelling": "var(strings)",
+        "shadow": "color(var(background) blend(#000 50%))"
     },
     "rules":
     [
         {
             "name": "Text",
             "scope": "variable.parameter",
-            "foreground": "var(black)"
+            "foreground": "var(plain_text)"
         },
         {
             "name": "Comments",
             "scope": "comment, punctuation.definition.comment",
-            "foreground": "var(green)"
+            "foreground": "var(comments)"
         },
         {
             "name": "Punctuation",
             "scope": "punctuation.definition",
-            "foreground": "var(blacklight)"
+            "foreground": "var(plain_text)"
         },
         {
             "name": "Operators",
             "scope": "keyword.operator",
-            "foreground": "var(black)"
+            "foreground": "var(plain_text)"
         },
         {
             "name": "Keywords",
             "scope": "keyword, keyword.operator.word",
-            "foreground": "var(pink)"
+            "foreground": "var(keywords)"
         },
         {
             "name": "Keywords",
             "scope": "keyword.control.import",
-            "foreground": "var(lightbrown)"
+            "foreground": "var(preprocessor_statements)"
         },
         {
             "name": "Variables",
             "scope": "variable",
-            "foreground": "var(black)"
+            "foreground": "var(plain_text)"
         },
         {
             "name": "Variables",
             "scope": "variable.other.readwrite.member",
-            "foreground": "var(bondi)"
+            "foreground": "var(project_variables)"
         },
         {
             "name": "Variable function",
             "scope": "variable.function",
-            "foreground": "var(darkbondi)"
+            "foreground": "var(project_method_names)"
         },
         {
             "name": "Functions",
             "scope": "entity.name.function",
-            "foreground": "var(black)"
+            "foreground": "var(plain_text)"
         },
         {
             "name": "Classes",
             "scope": "entity.name - (entity.name.section | entity.name.tag | entity.name.label)",
-            "foreground": "var(darkbondi)"
+            "foreground": "var(project_class_names)"
         },
         {
             "name": "Storage",
             "scope": "storage",
-            "foreground": "var(pink)"
+            "foreground": "var(keywords)"
         },
         {
             "name": "Support Functions",
             "scope": "support.function",
-            "foreground": "var(bondi)"
+            "foreground": "var(other_method_names)"
         },
         {
             "name": "Method Call",
             "scope": "meta.method-call variable.function",
-            "foreground": "var(purple)"
+            "foreground": "var(other_method_names)"
         },
         {
             "name": "Method Call",
             "scope": "meta.method-call variable.function.member",
-            "foreground": "var(darkpurple)"
+            "foreground": "var(other_preprocessor_macros)"
         },
         {
             "name": "Support Classes",
             "scope": "support.class",
-            "foreground": "var(bondi)"
+            "foreground": "var(project_class_names)"
         },
         {
             "name": "Support Constants",
             "scope": "support.constant, constant.language",
-            "foreground": "var(pink)",
+            "foreground": "var(keywords)",
             "font_style": "italic"
         },
         {
             "name": "CSS Support Constants",
             "scope": "source.css support.constant",
-            "foreground": "var(brown)"
+            "foreground": "var(preprocessor_statements)"
         },
         {
             "name": "Strings, Inherited Class",
             "scope": "string, entity.other.inherited-class",
-            "foreground": "var(red)"
+            "foreground": "var(strings)"
         },
         {
             "name": "Strings Punctuation",
             "scope": "string punctuation.definition.string",
-            "foreground": "var(red)"
+            "foreground": "var(strings)"
         },
         {
             "name": "Variables in Strings",
             "scope": "string variable",
-            "foreground": "var(black)"
+            "foreground": "var(plain_text)"
         },
         {
             "name": "Misc Punctuation",
             "scope": "punctuation.separator, punctuation.terminator, punctuation.accessor",
-            "foreground": "var(blacklight)"
+            "foreground": "var(plain_text)"
         },
         {
             "name": "Misc Punctuation",
             "scope": "punctuation.section",
-            "foreground": "var(black)"
+            "foreground": "var(plain_text)"
         },
         {
             "name": "Integers",
             "scope": "constant.numeric",
-            "foreground": "var(blue)"
+            "foreground": "var(numbers)"
         },
         {
             "name": "Constants",
             "scope": "constant",
-            "foreground": "var(darkbondi)"
+            "foreground": "var(project_constants)"
         },
         {
             "name": "Tags",
             "scope": "entity.name.tag",
-            "foreground": "var(red)"
+            "foreground": "var(strings)"
         },
         {
             "name": "Attributes",
             "scope": "entity.other.attribute-name",
-            "foreground": "var(lightbrown)"
+            "foreground": "var(attributes)"
         },
         {
             "name": "Headings",
             "scope": "markup.heading",
-            "foreground": "var(pink)",
+            "foreground": "var(project_constants)",
             "font_style": "bold"
         },
         {
@@ -189,100 +205,100 @@
         {
             "name": "Code",
             "scope": "markup.raw",
-            "background": "var(whitedark)"
+            "background": "var(embedded)"
         },
         {
             "name": "Code",
             "scope": "markup.raw.inline",
-            "foreground": "var(brown)",
-            "background": "var(whitedark)"
+            "foreground": "var(preprocessor_statements)",
+            "background": "var(embedded)"
         },
         {
             "name": "Strings Punctuation",
             "scope": "markup.raw.inline punctuation.definition.raw",
-            "foreground": "var(blue)"
+            "foreground": "var(characters)"
         },
         {
             "name": "Link Text",
             "scope": "string.other.link, markup.underline.link",
-            "foreground": "var(darkblue)"
+            "foreground": "var(urls)"
         },
         {
             "name": "Lists",
             "scope": "punctuation.definition.list_item, markup.list.numbered.bullet",
-            "foreground": "var(bondi)"
+            "foreground": "var(documentation_markup)"
         },
         {
             "name": "Quotes",
             "scope": "punctuation.definition.blockquote",
-            "background": "var(grey)"
+            "background": "var(invisibles)"
         },
         {
             "name": "Link/Image Punctuation",
             "scope": "punctuation.definition.image, punctuation.definition.link, punctuation.definition.metadata",
-            "foreground": "var(darkblue)"
+            "foreground": "var(urls)"
         },
         {
             "name": "Inserted",
             "scope": "markup.inserted",
-            "foreground": "var(green)"
+            "foreground": "var(comments)"
         },
         {
             "name": "Deleted",
             "scope": "markup.deleted",
-            "foreground": "var(red)"
+            "foreground": "var(invalid)"
         },
         {
             "name": "Changed",
             "scope": "markup.changed",
-            "foreground": "var(lightbrown)"
+            "foreground": "var(attributes)"
         },
         {
             "name": "Colors",
             "scope": "constant.other.color",
-            "foreground": "var(blue)"
+            "foreground": "var(characters)"
         },
         {
             "name": "Regular Expressions",
             "scope": "string.regexp",
-            "foreground": "var(blue)"
+            "foreground": "var(characters)"
         },
         {
             "name": "Regular Expressions Operator",
             "scope": "string.regexp keyword.operator",
-            "foreground": "var(black)"
+            "foreground": "var(plain_text)"
         },
         {
             "name": "Escape Characters",
             "scope": "constant.character.escape",
-            "foreground": "var(brown)"
+            "foreground": "var(other_preprocessor_macros)"
         },
         {
             "name": "YAML String",
             "scope": "source.yaml string.unquoted",
-            "foreground": "var(red)"
+            "foreground": "var(strings)"
         },
         {
             "name": "Embedded",
             "scope": "punctuation.section.embedded",
-            "foreground": "var(blacklight)"
+            "foreground": "var(embedded)"
         },
         {
-            "name": "Embedded",
+            "name": "Embedded Variable",
             "scope": "variable.interpolation",
-            "foreground": "var(brown)"
+            "foreground": "var(project_preprocessor_macros)"
         },
         {
             "name": "Illegal",
             "scope": "invalid.illegal",
-            "foreground": "var(white)",
-            "background": "var(red)"
+            "foreground": "#FFF",
+            "background": "var(invalid)"
         },
         {
             "name": "Invalid deprecated",
             "scope": "invalid.deprecated",
-            "foreground": "var(white)",
-            "background": "var(brown)"
+            "foreground": "#FFF",
+            "background": "var(invalid)"
         }
     ]
 }
