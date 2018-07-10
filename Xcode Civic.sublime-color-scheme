@@ -251,7 +251,7 @@
         {
             "name": "Changed",
             "scope": "markup.changed",
-            "foreground": "var(attributes)"
+            "foreground": "var(preprocessor_statements)"
         },
         {
             "name": "Colors",
