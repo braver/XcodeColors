@@ -51,9 +51,9 @@
     "rules":
     [
         {
-            "name": "Text",
+            "name": "Parameters",
             "scope": "variable.parameter",
-            "foreground": "var(plain_text)"
+            "foreground": "var(attributes)"
         },
         {
             "name": "Comments",
