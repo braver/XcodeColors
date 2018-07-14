@@ -86,11 +86,6 @@
             "foreground": "var(plain_text)"
         },
         {
-            "name": "Variables",
-            "scope": "variable.other.readwrite.member",
-            "foreground": "var(project_variables)"
-        },
-        {
             "name": "Variable function",
             "scope": "variable.function",
             "foreground": "var(project_method_names)"
@@ -98,7 +93,7 @@
         {
             "name": "Functions",
             "scope": "entity.name.function",
-            "foreground": "var(plain_text)"
+            "foreground": "var(project_method_names)"
         },
         {
             "name": "Classes",
@@ -128,7 +123,7 @@
         {
             "name": "Support Classes",
             "scope": "support.class",
-            "foreground": "var(project_class_names)"
+            "foreground": "var(other_class_names)"
         },
         {
             "name": "Support Constants",
@@ -185,6 +180,16 @@
             "name": "Attributes",
             "scope": "entity.other.attribute-name",
             "foreground": "var(attributes)"
+        },
+        {
+            "name": "Types",
+            "scope": "entity.name.type",
+            "foreground": "var(project_type_names)"
+        },
+        {
+            "name": "Types",
+            "scope": "support.type",
+            "foreground": "var(other_type_names)"
         },
         {
             "name": "Headings",
@@ -251,7 +256,7 @@
         {
             "name": "Changed",
             "scope": "markup.changed",
-            "foreground": "var(other_preprocessor_macros)"
+            "foreground": "var(attributes)"
         },
         {
             "name": "Colors",
