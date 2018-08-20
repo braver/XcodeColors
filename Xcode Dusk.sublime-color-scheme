@@ -51,6 +51,16 @@
     "rules":
     [
         {
+            "name": "Error",
+            "scope": "markup.error",
+            "foreground": "var(strings)"
+        },
+        {
+            "name": "Warning",
+            "scope": "markup.warning",
+            "foreground": "var(preprocessor_statements)"
+        },
+        {
             "name": "Parameters",
             "scope": "variable.parameter",
             "foreground": "var(attributes)"
@@ -304,6 +314,11 @@
             "scope": "invalid.deprecated",
             "foreground": "#FFF",
             "background": "var(invalid)"
+        },
+        {
+            "name": "Markdown Line Break",
+            "scope": "punctuation.definition.hard-line-break",
+            "background": "var(invisibles)"
         }
     ]
 }
