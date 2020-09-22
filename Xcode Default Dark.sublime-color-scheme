@@ -92,7 +92,7 @@
         },
         {
             "name": "Keywords",
-            "scope": "keyword.control.import",
+            "scope": "keyword.control, keyword.control punctuation.definition",
             "foreground": "var(preprocessor_statements)"
         },
         {
@@ -112,13 +112,18 @@
         },
         {
             "name": "Classes",
-            "scope": "entity.name - (entity.name.section | entity.name.tag | entity.name.label)",
+            "scope": "entity.name - (entity.name.section | entity.name.tag | entity.name.label), variable.other.dollar.only.js",
             "foreground": "var(project_class_names)"
         },
         {
             "name": "Storage",
             "scope": "storage",
-            "foreground": "var(keywords)"
+            "foreground": "var(other_declarations)"
+        },
+        {
+            "name": "Function Storage",
+            "scope": "meta.function.declaration storage.type.function, storage.type.function keyword.declaration, storage.type.class keyword.declaration",
+            "foreground": "var(other_declarations)"
         },
         {
             "name": "Support Functions",
@@ -143,7 +148,7 @@
         {
             "name": "Support Constants",
             "scope": "support.constant, constant.language",
-            "foreground": "var(keywords)",
+            "foreground": "var(other_constants)",
             "font_style": "italic"
         },
         {
@@ -164,7 +169,7 @@
         {
             "name": "Variables in Strings",
             "scope": "string variable",
-            "foreground": "var(plain_text)"
+            "foreground": "var(other_variables)"
         },
         {
             "name": "Misc Punctuation",
@@ -178,7 +183,7 @@
         },
         {
             "name": "Integers",
-            "scope": "constant.numeric",
+            "scope": "constant.numeric, constant.numeric punctuation.separator",
             "foreground": "var(numbers)"
         },
         {
@@ -189,12 +194,12 @@
         {
             "name": "Tags",
             "scope": "entity.name.tag",
-            "foreground": "var(strings)"
+            "foreground": "var(project_class_names)"
         },
         {
             "name": "Attributes",
-            "scope": "entity.other.attribute-name",
-            "foreground": "var(attributes)"
+            "scope": "entity.other.attribute-name, entity.other.attribute-name punctuation.definition",
+            "foreground": "var(project_method_names)"
         },
         {
             "name": "Types",
@@ -207,9 +212,19 @@
             "foreground": "var(other_type_names)"
         },
         {
+            "name": "Types",
+            "scope": "entity.other support.type",
+            "foreground": "var(preprocessor_statements)"
+        },
+        {
+            "name": "Types",
+            "scope": "entity.other.pseudo-element, entity.other.pseudo-element punctuation.definition, entity.other.pseudo-class, entity.other.pseudo-class punctuation.definition",
+            "foreground": "var(preprocessor_statements)"
+        },
+        {
             "name": "Headings",
             "scope": "markup.heading",
-            "foreground": "var(project_constants)",
+            "foreground": "var(heading)",
             "font_style": "bold"
         },
         {
@@ -275,7 +290,7 @@
         },
         {
             "name": "Colors",
-            "scope": "constant.other.color",
+            "scope": "constant.other.color, constant.other.color punctuation.definition",
             "foreground": "var(characters)"
         },
         {
@@ -301,7 +316,7 @@
         {
             "name": "Embedded Variable",
             "scope": "variable.interpolation",
-            "foreground": "var(project_preprocessor_macros)"
+            "foreground": "var(other_variables)"
         },
         {
             "name": "Illegal",
