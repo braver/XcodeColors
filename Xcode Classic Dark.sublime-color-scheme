@@ -1,37 +1,42 @@
 {
-    "name": "Xcode Midnight",
+    "name": "Xcode Classic Dark",
     "author": "Koen Lageveen, inspired by Apple",
     "variables":
     {
-        "plain_text"                    : "#FFFFFF",  // white
-        "comments"                      : "#4BD156",  // green
-        "documentation_markup"          : "#4BD156",  // green
-        "documentation_markup_keywords" : "#4BD156",  // green
-        "strings"                       : "#FF4647",  // red
-        "characters"                    : "#8B87FF",  // purple
-        "numbers"                       : "#8B87FF",  // purple
-        "keywords"                      : "#DE38A5",  // pink
-        "preprocessor_statements"       : "#EB905A",  // brown
-        "urls"                          : "#527EFF",  // hot blue
-        "attributes"                    : "#3B5AAC",  // dark blue
-        "project_class_names"           : "#08FA95",  // hot turquoise
-        "project_method_names"          : "#08FA95",  // hot turquoise
-        "project_constants"             : "#08FA95",  // hot turquoise
-        "project_type_names"            : "#08FA95",  // hot turquoise
-        "project_variables"             : "#08FA95",  // hot turquoise
-        "project_preprocessor_macros"   : "#EB905A",  // brown
-        "other_class_names"             : "#00B1FF",  // sea blue
-        "other_method_names"            : "#00B1FF",  // sea blue
-        "other_constants"               : "#00B1FF",  // sea blue
-        "other_type_names"              : "#00B1FF",  // sea blue
-        "other_variables"               : "#00B1FF",  // sea blue
-        "other_preprocessor_macros"     : "#EB905A",  // brown
+        "plain_text"                    : "#FFFFFFD9",
+        "comments"                      : "#73A74E",
+        "documentation_markup"          : "#73A74E",
+        "documentation_markup_keywords" : "#A2E474",
+        "marks"                         : "#A2E474",
+        "strings"                       : "#FC6A5D",
+        "characters"                    : "#D0BF69",
+        "numbers"                       : "#D0BF69",
+        "keywords"                      : "#FC5FA3",
+        "preprocessor_statements"       : "#FD8F3F",
+        "urls"                          : "#5482FF",
+        "attributes"                    : "#BF8555",
+        "type_declarations"             : "#5DD8FF",
+        "other_declarations"            : "#41A1C0",
+        "project_class_names"           : "#9EF1DD",
+        "project_method_names"          : "#67B7A4",
+        "project_constants"             : "#67B7A4",
+        "project_type_names"            : "#9EF1DD",
+        "project_variables"             : "#67B7A4",
+        "project_preprocessor_macros"   : "#FD8F3F",
+        "other_class_names"             : "#D0A8FF",
+        "other_method_names"            : "#A167E6",
+        "other_constants"               : "#A167E6",
+        "other_type_names"              : "#D0A8FF",
+        "other_variables"               : "#A167E6",
+        "other_preprocessor_macros"     : "#FD8F3F",
 
-        "background"                    : "#000000",  // black
-        "current_line"                  : "#232121",  // dark grey
-        "selection"                     : "#5D5952",  // mid grey
-        "cursor"                        : "#FFF",     // white
-        "invisibles"                    : "#424242",  // grey
+        "heading"                       : "#AA0D91",
+
+        "background"                    : "#1F1F24",
+        "current_line"                  : "#23252B",
+        "selection"                     : "#515B70",
+        "cursor"                        : "#FFFFFF",
+        "invisibles"                    : "#424D5B",
 
         "embedded": "color(var(background) blend(var(invisibles) 86%))",
         "invalid": "var(strings)",
@@ -43,7 +48,7 @@
         "caret": "var(cursor)",
         "line_highlight": "var(current_line)",
         "selection": "var(selection)",
-        "selection_border": "color(var(selection) blend(#FFF 92%)",
+        "selection_border": "color(var(selection) blend(#000 92%)",
         "inactive_selection": "color(var(selection) blend(var(background) 72%)",
         "misspelling": "var(strings)",
         "shadow": "color(var(background) blend(#000 50%))"
@@ -58,7 +63,7 @@
         {
             "name": "Warning",
             "scope": "markup.warning",
-            "foreground": "var(preprocessor_statements)"
+            "foreground": "var(attributes)"
         },
         {
             "name": "Parameters",

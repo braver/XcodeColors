@@ -1,37 +1,38 @@
 {
-    "name": "Xcode Midnight",
-    "author": "Koen Lageveen, inspired by Apple",
+    "name": "Xcode Default (Dark)",
+    "author": "Kees van Beilen, inspired by Apple",
     "variables":
     {
-        "plain_text"                    : "#FFFFFF",  // white
-        "comments"                      : "#4BD156",  // green
-        "documentation_markup"          : "#4BD156",  // green
-        "documentation_markup_keywords" : "#4BD156",  // green
-        "strings"                       : "#FF4647",  // red
-        "characters"                    : "#8B87FF",  // purple
-        "numbers"                       : "#8B87FF",  // purple
-        "keywords"                      : "#DE38A5",  // pink
-        "preprocessor_statements"       : "#EB905A",  // brown
-        "urls"                          : "#527EFF",  // hot blue
-        "attributes"                    : "#3B5AAC",  // dark blue
-        "project_class_names"           : "#08FA95",  // hot turquoise
-        "project_method_names"          : "#08FA95",  // hot turquoise
-        "project_constants"             : "#08FA95",  // hot turquoise
-        "project_type_names"            : "#08FA95",  // hot turquoise
-        "project_variables"             : "#08FA95",  // hot turquoise
-        "project_preprocessor_macros"   : "#EB905A",  // brown
-        "other_class_names"             : "#00B1FF",  // sea blue
-        "other_method_names"            : "#00B1FF",  // sea blue
-        "other_constants"               : "#00B1FF",  // sea blue
-        "other_type_names"              : "#00B1FF",  // sea blue
-        "other_variables"               : "#00B1FF",  // sea blue
-        "other_preprocessor_macros"     : "#EB905A",  // brown
-
-        "background"                    : "#000000",  // black
-        "current_line"                  : "#232121",  // dark grey
-        "selection"                     : "#5D5952",  // mid grey
+        //These colors where extracted from the xcode color plist file and are 99% accurate.
+        "plain_text"                    : "#FFF",     // white
+        "comments"                      : "#6c7986",  // grey
+        "documentation_markup"          : "#6c7986",  // grey
+        "documentation_markup_keywords" : "#92a1b1",  // light-grey
+        "strings"                       : "#fc6a5d",  // orange
+        "characters"                    : "#d0bf69",  // yellow
+        "numbers"                       : "#d0bf69",  // yellow
+        "keywords"                      : "#fc5fa3",  // pink
+        "preprocessor_statements"       : "#fd8f3f",  // light brown
+        "urls"                          : "#5482ff",  // cold blue
+        "attributes"                    : "#bf8555",  // brown
+        "project_class_names"           : "#9ef1dd",  // light bondi
+        "project_method_names"          : "#67b7a4",  // dark bondi
+        "project_constants"             : "#67b7a4",  // dark bondi
+        "project_type_names"            : "#9ef1dd",  // light bondi
+        "project_variables"             : "#67b7a4",  // light bondi
+        "project_preprocessor_macros"   : "#fd8f3f",  // light brown
+        "other_class_names"             : "#d0a8ff",  // light purple
+        "other_method_names"            : "#a167e6",  // purple
+        "other_constants"               : "#a167e6",  // purple
+        "other_type_names"              : "#d0a8ff",  // light purple
+        "other_variables"               : "#a167e6",  // light purple
+        "other_preprocessor_macros"     : "#fd8f3f",  // dark brown
+        //These where color picked and made a bit more brighter.
+        "background"                    : "#2E2F39",  // dark grey
+        "current_line"                  : "#383D46",  // grey
+        "selection"                     : "#595B5A",  // light grey
         "cursor"                        : "#FFF",     // white
-        "invisibles"                    : "#424242",  // grey
+        "invisibles"                    : "#27262E",  // grey
 
         "embedded": "color(var(background) blend(var(invisibles) 86%))",
         "invalid": "var(strings)",
@@ -43,7 +44,7 @@
         "caret": "var(cursor)",
         "line_highlight": "var(current_line)",
         "selection": "var(selection)",
-        "selection_border": "color(var(selection) blend(#FFF 92%)",
+        "selection_border": "color(var(selection) blend(#000 92%)",
         "inactive_selection": "color(var(selection) blend(var(background) 72%)",
         "misspelling": "var(strings)",
         "shadow": "color(var(background) blend(#000 50%))"
@@ -58,7 +59,7 @@
         {
             "name": "Warning",
             "scope": "markup.warning",
-            "foreground": "var(preprocessor_statements)"
+            "foreground": "var(attributes)"
         },
         {
             "name": "Parameters",
@@ -292,6 +293,11 @@
             "name": "YAML String",
             "scope": "source.yaml string.unquoted",
             "foreground": "var(strings)"
+        },
+        {
+            "name": "Embedded",
+            "scope": "punctuation.section.embedded",
+            "foreground": "var(embedded)"
         },
         {
             "name": "Embedded Variable",

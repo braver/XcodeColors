@@ -1,37 +1,41 @@
 {
-    "name": "Xcode Midnight",
+    "name": "Xcode Default",
     "author": "Koen Lageveen, inspired by Apple",
     "variables":
     {
-        "plain_text"                    : "#FFFFFF",  // white
-        "comments"                      : "#4BD156",  // green
-        "documentation_markup"          : "#4BD156",  // green
-        "documentation_markup_keywords" : "#4BD156",  // green
-        "strings"                       : "#FF4647",  // red
-        "characters"                    : "#8B87FF",  // purple
-        "numbers"                       : "#8B87FF",  // purple
-        "keywords"                      : "#DE38A5",  // pink
-        "preprocessor_statements"       : "#EB905A",  // brown
-        "urls"                          : "#527EFF",  // hot blue
-        "attributes"                    : "#3B5AAC",  // dark blue
-        "project_class_names"           : "#08FA95",  // hot turquoise
-        "project_method_names"          : "#08FA95",  // hot turquoise
-        "project_constants"             : "#08FA95",  // hot turquoise
-        "project_type_names"            : "#08FA95",  // hot turquoise
-        "project_variables"             : "#08FA95",  // hot turquoise
-        "project_preprocessor_macros"   : "#EB905A",  // brown
-        "other_class_names"             : "#00B1FF",  // sea blue
-        "other_method_names"            : "#00B1FF",  // sea blue
-        "other_constants"               : "#00B1FF",  // sea blue
-        "other_type_names"              : "#00B1FF",  // sea blue
-        "other_variables"               : "#00B1FF",  // sea blue
-        "other_preprocessor_macros"     : "#EB905A",  // brown
+        "plain_text"                    : "#000000D9",
+        "comments"                      : "#267507",
+        "documentation_markup"          : "#267507",
+        "documentation_markup_keywords" : "#267507",
+        "marks"                         : "#267507",
+        "strings"                       : "#C41A16",
+        "characters"                    : "#1C00CF",
+        "numbers"                       : "#1C00CF",
+        "keywords"                      : "#9B2393",
+        "preprocessor_statements"       : "#643820",
+        "urls"                          : "#0E0EFF",
+        "attributes"                    : "#815F03",
+        "type_declarations"             : "#0B4F79",
+        "other_declarations"            : "#0F68A0",
+        "project_class_names"           : "#1C464A",
+        "project_method_names"          : "#326D74",
+        "project_constants"             : "#326D74",
+        "project_type_names"            : "#1C464A",
+        "project_variables"             : "#326D74",
+        "project_preprocessor_macros"   : "#643820",
+        "other_class_names"             : "#3900A0",
+        "other_method_names"            : "#6C36A9",
+        "other_constants"               : "#6C36A9",
+        "other_type_names"              : "#3900A0",
+        "other_variables"               : "#6C36A9",
+        "other_preprocessor_macros"     : "#643820",
+        "heading"                       : "#AA0D91",
 
-        "background"                    : "#000000",  // black
-        "current_line"                  : "#232121",  // dark grey
-        "selection"                     : "#5D5952",  // mid grey
-        "cursor"                        : "#FFF",     // white
-        "invisibles"                    : "#424242",  // grey
+        "background"                    : "#FFF",
+        "current_line"                  : "#E8F2FF",
+        "selection"                     : "#A4CDFF",
+        "cursor"                        : "#000",
+        "invisibles"                    : "#CCCCCC",
 
         "embedded": "color(var(background) blend(var(invisibles) 86%))",
         "invalid": "var(strings)",
@@ -43,7 +47,7 @@
         "caret": "var(cursor)",
         "line_highlight": "var(current_line)",
         "selection": "var(selection)",
-        "selection_border": "color(var(selection) blend(#FFF 92%)",
+        "selection_border": "color(var(selection) blend(#000 92%)",
         "inactive_selection": "color(var(selection) blend(var(background) 72%)",
         "misspelling": "var(strings)",
         "shadow": "color(var(background) blend(#000 50%))"
@@ -58,7 +62,7 @@
         {
             "name": "Warning",
             "scope": "markup.warning",
-            "foreground": "var(preprocessor_statements)"
+            "foreground": "var(attributes)"
         },
         {
             "name": "Parameters",
