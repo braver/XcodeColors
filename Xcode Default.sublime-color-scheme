@@ -5,30 +5,37 @@
     {
         "plain_text"                    : "#000000D9",
         "comments"                      : "#5D6C79",
+
         "documentation_markup"          : "#5D6C79",
         "documentation_markup_keywords" : "#4A5560",
         "marks"                         : "#4A5560",
+
         "strings"                       : "#C41A16",
         "characters"                    : "#1C00CF",
         "numbers"                       : "#1C00CF",
         "keywords"                      : "#9B2393",
+
         "preprocessor_statements"       : "#643820",
         "urls"                          : "#0E0EFF",
         "attributes"                    : "#815F03",
+
         "type_declarations"             : "#0B4F79",
         "other_declarations"            : "#0F68A0",
+
         "project_class_names"           : "#1C464A",
         "project_method_names"          : "#326D74",
         "project_constants"             : "#326D74",
         "project_type_names"            : "#1C464A",
         "project_variables"             : "#326D74",
         "project_preprocessor_macros"   : "#643820",
+
         "other_class_names"             : "#3900A0",
         "other_method_names"            : "#6C36A9",
         "other_constants"               : "#6C36A9",
         "other_type_names"              : "#3900A0",
         "other_variables"               : "#6C36A9",
         "other_preprocessor_macros"     : "#643820",
+
         "heading"                       : "#AA0D91",
 
         "background"                    : "#FFF",
@@ -39,18 +46,50 @@
 
         "embedded": "color(var(background) blend(var(invisibles) 86%))",
         "invalid": "var(strings)",
+
+        "yellow": "#BFB149"
     },
     "globals":
     {
-        "foreground": "var(plain_text)",
         "background": "var(background)",
-        "caret": "var(cursor)",
+        "foreground": "var(plain_text)",
         "line_highlight": "var(current_line)",
-        "selection": "var(selection)",
-        "selection_border": "color(var(selection) blend(#000 92%)",
-        "inactive_selection": "color(var(selection) blend(var(background) 72%)",
+        "gutter": "var(background)",
+        "minimap_border": "var(comments)",
+
+        "caret": "var(cursor)",
+        "block_caret": "var(cursor)",
+        "invisibles": "var(invisibles)",
         "misspelling": "var(strings)",
-        "shadow": "color(var(background) blend(#000 50%))"
+
+        "highlight": "color(var(selection) lightness(- 10%))",
+        "find_highlight": "var(current_line)",
+        "find_highlight_foreground": "var(plain_text)",
+
+        "accent": "var(other_declarations)",
+        "fold_marker": "var(yellow)",
+
+        "guide": "color(var(project_variables) alpha(20%))",
+        "active_guide": "color(var(project_variables) alpha(60%))",
+        "stack_guide": "color(var(project_variables) alpha(40%))",
+
+        "selection": "var(selection)",
+        "selection_border": "color(var(selection) lightness(- 10%))",
+        "inactive_selection": "color(var(selection) alpha(50%))",
+
+        "brackets_options": "underline",
+        "brackets_foreground": "var(other_declarations)",
+        "bracket_contents_options": "underline",
+        "bracket_contents_foreground": "var(other_declarations)",
+        "tags_options": "stippled_underline",
+        "tags_foreground": "var(other_declarations)",
+
+        "shadow": "color(#000 alpha(30%))",
+        "shadow_width": "4",
+
+        "line_diff_added" : "var(project_variables)",
+        "line_diff_modified" : "var(yellow)",
+        "line_diff_deleted" : "var(strings)"
     },
     "rules":
     [
@@ -320,14 +359,14 @@
         {
             "name": "Illegal",
             "scope": "invalid.illegal",
-            "foreground": "#FFF",
-            "background": "var(invalid)"
+            "foreground": "var(invalid)",
+            "background": "color(var(invalid) blend(var(background) 50%))"
         },
         {
             "name": "Invalid deprecated",
             "scope": "invalid.deprecated",
-            "foreground": "#FFF",
-            "background": "var(invalid)"
+            "foreground": "var(invalid)",
+            "background": "color(var(invalid) blend(var(background) 50%))"
         },
         {
             "name": "Markdown Line Break",

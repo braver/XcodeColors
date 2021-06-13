@@ -5,24 +5,30 @@
     {
         "plain_text"                    : "#FFFFFFD9",
         "comments"                      : "#6C7986",
+
         "documentation_markup"          : "#6C7986",
         "documentation_markup_keywords" : "#92A1B1",
         "marks"                         : "#92A1B1",
+
         "strings"                       : "#FC6A5D",
         "characters"                    : "#D0BF69",
         "numbers"                       : "#D0BF69",
         "keywords"                      : "#FC5FA3",
+
         "preprocessor_statements"       : "#FD8F3F",
         "urls"                          : "#5482FF",
         "attributes"                    : "#BF8555",
+
         "type_declarations"             : "#5DD8FF",
         "other_declarations"            : "#41A1C0",
+
         "project_class_names"           : "#9EF1DD",
         "project_method_names"          : "#67B7A4",
         "project_constants"             : "#67B7A4",
         "project_type_names"            : "#9EF1DD",
         "project_variables"             : "#67B7A4",
         "project_preprocessor_macros"   : "#FD8F3F",
+
         "other_class_names"             : "#D0A8FF",
         "other_method_names"            : "#A167E6",
         "other_constants"               : "#A167E6",
@@ -40,18 +46,50 @@
 
         "embedded": "color(var(background) blend(var(invisibles) 86%))",
         "invalid": "var(strings)",
+
+        "yellow": "var(characters)"
     },
     "globals":
     {
-        "foreground": "var(plain_text)",
         "background": "var(background)",
-        "caret": "var(cursor)",
+        "foreground": "var(plain_text)",
         "line_highlight": "var(current_line)",
-        "selection": "var(selection)",
-        "selection_border": "color(var(selection) blend(#000 92%)",
-        "inactive_selection": "color(var(selection) blend(var(background) 72%)",
+        "gutter": "var(background)",
+        "minimap_border": "var(comments)",
+
+        "caret": "var(cursor)",
+        "block_caret": "var(cursor)",
+        "invisibles": "var(invisibles)",
         "misspelling": "var(strings)",
-        "shadow": "color(var(background) blend(#000 50%))"
+
+        "highlight": "color(var(selection) lightness(+ 10%))",
+        "find_highlight": "var(current_line)",
+        "find_highlight_foreground": "var(plain_text)",
+
+        "accent": "var(other_declarations)",
+        "fold_marker": "var(yellow)",
+
+        "guide": "color(var(project_variables) alpha(20%))",
+        "active_guide": "color(var(project_variables) alpha(60%))",
+        "stack_guide": "color(var(project_variables) alpha(40%))",
+
+        "selection": "var(selection)",
+        "selection_border": "color(var(selection) lightness(+ 10%))",
+        "inactive_selection": "color(var(selection) alpha(50%))",
+
+        "brackets_options": "underline",
+        "brackets_foreground": "var(other_declarations)",
+        "bracket_contents_options": "underline",
+        "bracket_contents_foreground": "var(other_declarations)",
+        "tags_options": "stippled_underline",
+        "tags_foreground": "var(other_declarations)",
+
+        "shadow": "color(#000 alpha(50%))",
+        "shadow_width": "4",
+
+        "line_diff_added" : "var(project_variables)",
+        "line_diff_modified" : "var(yellow)",
+        "line_diff_deleted" : "var(strings)"
     },
     "rules":
     [
@@ -321,14 +359,14 @@
         {
             "name": "Illegal",
             "scope": "invalid.illegal",
-            "foreground": "#FFF",
-            "background": "var(invalid)"
+            "foreground": "var(invalid)",
+            "background": "color(var(invalid) blend(var(background) 50%))"
         },
         {
             "name": "Invalid deprecated",
             "scope": "invalid.deprecated",
-            "foreground": "#FFF",
-            "background": "var(invalid)"
+            "foreground": "var(invalid)",
+            "background": "color(var(invalid) blend(var(background) 50%))"
         },
         {
             "name": "Markdown Line Break",
