@@ -78,7 +78,7 @@
         "inactive_selection": "color(var(selection) alpha(50%))",
 
         "brackets_options": "underline",
-        "brackets_foreground": "var(other_declarations)",
+        "brackets_foreground": "var(other_constants)",
         "bracket_contents_options": "underline",
         "bracket_contents_foreground": "var(other_declarations)",
         "tags_options": "stippled_underline",
