@@ -57,7 +57,11 @@
         "background": "var(background)",
         "foreground": "var(plain_text)",
         "line_highlight": "var(current_line)",
+
         "gutter": "var(background)",
+        "gutter_foreground": "var(invisibles)",
+        "gutter_foreground_highlight": "var(comments)",
+
         "minimap_border": "var(comments)",
 
         "caret": "var(cursor)",
