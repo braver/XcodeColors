@@ -3,6 +3,11 @@
     "author": "Koen Lageveen, inspired by Apple",
     "variables":
     {
+        "yellow": "#D0BF69",
+        "red": "#FC6A5D",
+        "green": "#67B7A4",
+
+
         "plain_text"                    : "#FFFFFFD9",
         "comments"                      : "#6C7986",
 
@@ -45,9 +50,7 @@
         "invisibles"                    : "#424D5B",
 
         "embedded": "color(var(background) blend(var(invisibles) 86%))",
-        "invalid": "var(strings)",
-
-        "yellow": "var(characters)"
+        "invalid": "var(strings)"
     },
     "globals":
     {
@@ -96,12 +99,12 @@
         {
             "name": "Error",
             "scope": "markup.error",
-            "foreground": "var(strings)"
+            "foreground": "var(red)"
         },
         {
             "name": "Warning",
             "scope": "markup.warning",
-            "foreground": "var(attributes)"
+            "foreground": "var(yellow)"
         },
         {
             "name": "Parameters",
@@ -314,17 +317,17 @@
         {
             "name": "Inserted",
             "scope": "markup.inserted",
-            "foreground": "var(comments)"
+            "foreground": "var(green)"
         },
         {
             "name": "Deleted",
             "scope": "markup.deleted",
-            "foreground": "var(invalid)"
+            "foreground": "var(red)"
         },
         {
             "name": "Changed",
             "scope": "markup.changed",
-            "foreground": "var(attributes)"
+            "foreground": "var(yellow)"
         },
         {
             "name": "Colors",

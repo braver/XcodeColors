@@ -3,40 +3,59 @@
     "author": "Koen Lageveen, inspired by Apple",
     "variables":
     {
+        "blue": "#0B4F79",
+        "light_blue": "#0F68A0",
+        "hard_blue": "#1C00CF",
+        "bondi": "#1C464A",
+        "light_bondi": "#326D74",
+        "purple": "#3900A0",
+        "light_purple": "#6C36A9",
+        "fuchsia": "#9B2393",
+        "light_fuchsia": "#AA0D91",
+        "grey": "#4A5560",
+        "light_grey": "#5D6C79",
+        "brown": "#643820",
+        "light_brown": "#815F03",
+
+        "red": "#C41A16",
+        "green": "#007826",
+        "yellow": "#BFB149",
+
+
         "plain_text"                    : "#000000D9",
-        "comments"                      : "#5D6C79",
+        "comments"                      : "var(light_grey)",
 
-        "documentation_markup"          : "#5D6C79",
-        "documentation_markup_keywords" : "#4A5560",
-        "marks"                         : "#4A5560",
+        "documentation_markup"          : "var(light_grey)",
+        "documentation_markup_keywords" : "var(grey)",
+        "marks"                         : "var(grey)",
 
-        "strings"                       : "#C41A16",
-        "characters"                    : "#1C00CF",
-        "numbers"                       : "#1C00CF",
-        "keywords"                      : "#9B2393",
+        "strings"                       : "var(red)",
+        "characters"                    : "var(hard_blue)",
+        "numbers"                       : "var(hard_blue)",
+        "keywords"                      : "var(fuchsia)",
 
-        "preprocessor_statements"       : "#643820",
+        "preprocessor_statements"       : "var(brown)",
         "urls"                          : "#0E0EFF",
-        "attributes"                    : "#815F03",
+        "attributes"                    : "var(light_brown)",
 
-        "type_declarations"             : "#0B4F79",
-        "other_declarations"            : "#0F68A0",
+        "type_declarations"             : "var(blue)",
+        "other_declarations"            : "var(light_blue)",
 
-        "project_class_names"           : "#1C464A",
-        "project_method_names"          : "#326D74",
-        "project_constants"             : "#326D74",
-        "project_type_names"            : "#1C464A",
-        "project_variables"             : "#326D74",
-        "project_preprocessor_macros"   : "#643820",
+        "project_class_names"           : "var(bondi)",
+        "project_method_names"          : "var(light_bondi)",
+        "project_constants"             : "var(light_bondi)",
+        "project_type_names"            : "var(bondi)",
+        "project_variables"             : "var(light_bondi)",
+        "project_preprocessor_macros"   : "var(brown)",
 
-        "other_class_names"             : "#3900A0",
-        "other_method_names"            : "#6C36A9",
-        "other_constants"               : "#6C36A9",
-        "other_type_names"              : "#3900A0",
-        "other_variables"               : "#6C36A9",
-        "other_preprocessor_macros"     : "#643820",
+        "other_class_names"             : "var(purple)",
+        "other_method_names"            : "var(light_purple)",
+        "other_constants"               : "var(light_purple)",
+        "other_type_names"              : "var(purple)",
+        "other_variables"               : "var(light_purple)",
+        "other_preprocessor_macros"     : "var(brown)",
 
-        "heading"                       : "#AA0D91",
+        "heading"                       : "var(light_fuchsia)",
 
         "background"                    : "#FFF",
         "current_line"                  : "#E8F2FF",
@@ -45,9 +64,7 @@
         "invisibles"                    : "#CCCCCC",
 
         "embedded": "color(var(background) blend(var(invisibles) 86%))",
-        "invalid": "var(strings)",
-
-        "yellow": "#BFB149"
+        "invalid": "var(red)"
     },
     "globals":
     {
@@ -87,21 +104,21 @@
         "shadow": "color(#000 alpha(30%))",
         "shadow_width": "4",
 
-        "line_diff_added" : "var(project_variables)",
+        "line_diff_added" : "var(green)",
         "line_diff_modified" : "var(yellow)",
-        "line_diff_deleted" : "var(strings)"
+        "line_diff_deleted" : "var(red)"
     },
     "rules":
     [
         {
             "name": "Error",
             "scope": "markup.error",
-            "foreground": "var(strings)"
+            "foreground": "var(red)"
         },
         {
             "name": "Warning",
             "scope": "markup.warning",
-            "foreground": "var(attributes)"
+            "foreground": "var(yellow)"
         },
         {
             "name": "Parameters",
@@ -314,17 +331,17 @@
         {
             "name": "Inserted",
             "scope": "markup.inserted",
-            "foreground": "var(comments)"
+            "foreground": "var(green)"
         },
         {
             "name": "Deleted",
             "scope": "markup.deleted",
-            "foreground": "var(invalid)"
+            "foreground": "var(red)"
         },
         {
             "name": "Changed",
             "scope": "markup.changed",
-            "foreground": "var(attributes)"
+            "foreground": "var(yellow)"
         },
         {
             "name": "Colors",
