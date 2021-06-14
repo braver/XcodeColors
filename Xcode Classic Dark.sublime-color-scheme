@@ -1,128 +1,69 @@
 {
-    "name": "Xcode Default",
+    "name": "Xcode Classic Dark",
     "author": "Koen Lageveen, inspired by Apple",
     "variables":
     {
-        "blue": "#0B4F79",
-        "light_blue": "#0F68A0",
-        "hard_blue": "#1C00CF",
-        "bondi": "#1C464A",
-        "light_bondi": "#326D74",
-        "purple": "#3900A0",
-        "light_purple": "#6C36A9",
-        "fuchsia": "#9B2393",
-        "light_fuchsia": "#AA0D91",
-        "grey": "#4A5560",
-        "light_grey": "#5D6C79",
-        "brown": "#643820",
-        "light_brown": "#815F03",
+        "plain_text"                    : "#FFFFFFD9",
+        "comments"                      : "#73A74E",
+        "documentation_markup"          : "#73A74E",
+        "documentation_markup_keywords" : "#A2E474",
+        "marks"                         : "#A2E474",
+        "strings"                       : "#FC6A5D",
+        "characters"                    : "#D0BF69",
+        "numbers"                       : "#D0BF69",
+        "keywords"                      : "#FC5FA3",
+        "preprocessor_statements"       : "#FD8F3F",
+        "urls"                          : "#5482FF",
+        "attributes"                    : "#BF8555",
+        "type_declarations"             : "#5DD8FF",
+        "other_declarations"            : "#41A1C0",
+        "project_class_names"           : "#9EF1DD",
+        "project_method_names"          : "#67B7A4",
+        "project_constants"             : "#67B7A4",
+        "project_type_names"            : "#9EF1DD",
+        "project_variables"             : "#67B7A4",
+        "project_preprocessor_macros"   : "#FD8F3F",
+        "other_class_names"             : "#D0A8FF",
+        "other_method_names"            : "#A167E6",
+        "other_constants"               : "#A167E6",
+        "other_type_names"              : "#D0A8FF",
+        "other_variables"               : "#A167E6",
+        "other_preprocessor_macros"     : "#FD8F3F",
 
-        "red": "#C41A16",
-        "green": "#007826",
-        "yellow": "#BFB149",
+        "heading"                       : "#AA0D91",
 
-
-        "plain_text"                    : "#000000D9",
-        "comments"                      : "var(light_grey)",
-
-        "documentation_markup"          : "var(light_grey)",
-        "documentation_markup_keywords" : "var(grey)",
-        "marks"                         : "var(grey)",
-
-        "strings"                       : "var(red)",
-        "characters"                    : "var(hard_blue)",
-        "numbers"                       : "var(hard_blue)",
-        "keywords"                      : "var(fuchsia)",
-
-        "preprocessor_statements"       : "var(brown)",
-        "urls"                          : "#0E0EFF",
-        "attributes"                    : "var(light_brown)",
-
-        "type_declarations"             : "var(blue)",
-        "other_declarations"            : "var(light_blue)",
-
-        "project_class_names"           : "var(bondi)",
-        "project_method_names"          : "var(light_bondi)",
-        "project_constants"             : "var(light_bondi)",
-        "project_type_names"            : "var(bondi)",
-        "project_variables"             : "var(light_bondi)",
-        "project_preprocessor_macros"   : "var(brown)",
-
-        "other_class_names"             : "var(purple)",
-        "other_method_names"            : "var(light_purple)",
-        "other_constants"               : "var(light_purple)",
-        "other_type_names"              : "var(purple)",
-        "other_variables"               : "var(light_purple)",
-        "other_preprocessor_macros"     : "var(brown)",
-
-        "heading"                       : "var(light_fuchsia)",
-
-        "background"                    : "#FFF",
-        "current_line"                  : "#E8F2FF",
-        "selection"                     : "#A4CDFF",
-        "cursor"                        : "#000",
-        "invisibles"                    : "#CCCCCC",
+        "background"                    : "#1F1F24",
+        "current_line"                  : "#23252B",
+        "selection"                     : "#515B70",
+        "cursor"                        : "#FFFFFF",
+        "invisibles"                    : "#424D5B",
 
         "embedded": "color(var(background) blend(var(invisibles) 86%))",
-        "invalid": "var(red)"
+        "invalid": "var(strings)",
     },
     "globals":
     {
-        "background": "var(background)",
         "foreground": "var(plain_text)",
-        "line_highlight": "var(current_line)",
-
-        "gutter": "var(background)",
-        "gutter_foreground": "var(invisibles)",
-        "gutter_foreground_highlight": "var(comments)",
-
-        "minimap_border": "var(comments)",
-
+        "background": "var(background)",
         "caret": "var(cursor)",
-        "block_caret": "var(cursor)",
-        "invisibles": "var(invisibles)",
-        "misspelling": "var(strings)",
-
-        "highlight": "color(var(selection) lightness(- 10%))",
-        "find_highlight": "var(current_line)",
-        "find_highlight_foreground": "var(plain_text)",
-
-        "accent": "var(other_declarations)",
-        "fold_marker": "var(yellow)",
-
-        "guide": "color(var(project_variables) alpha(20%))",
-        "active_guide": "color(var(project_variables) alpha(60%))",
-        "stack_guide": "color(var(project_variables) alpha(40%))",
-
+        "line_highlight": "var(current_line)",
         "selection": "var(selection)",
-        "selection_border": "color(var(selection) lightness(- 10%))",
-        "inactive_selection": "color(var(selection) alpha(50%))",
-
-        "brackets_options": "underline",
-        "brackets_foreground": "var(other_constants)",
-        "bracket_contents_options": "underline",
-        "bracket_contents_foreground": "var(other_declarations)",
-        "tags_options": "stippled_underline",
-        "tags_foreground": "var(other_declarations)",
-
-        "shadow": "color(#000 alpha(30%))",
-        "shadow_width": "4",
-
-        "line_diff_added" : "var(green)",
-        "line_diff_modified" : "var(yellow)",
-        "line_diff_deleted" : "var(red)"
+        "selection_border": "color(var(selection) blend(#000 92%)",
+        "inactive_selection": "color(var(selection) blend(var(background) 72%)",
+        "misspelling": "var(strings)",
+        "shadow": "color(var(background) blend(#000 50%))"
     },
     "rules":
     [
         {
             "name": "Error",
             "scope": "markup.error",
-            "foreground": "var(red)"
+            "foreground": "var(strings)"
         },
         {
             "name": "Warning",
             "scope": "markup.warning",
-            "foreground": "var(yellow)"
+            "foreground": "var(attributes)"
         },
         {
             "name": "Parameters",
@@ -151,7 +92,7 @@
         },
         {
             "name": "Keywords",
-            "scope": "keyword.control, keyword.control punctuation.definition",
+            "scope": "keyword.control.import",
             "foreground": "var(preprocessor_statements)"
         },
         {
@@ -171,18 +112,13 @@
         },
         {
             "name": "Classes",
-            "scope": "entity.name - (entity.name.section | entity.name.tag | entity.name.label), variable.other.dollar.only.js",
+            "scope": "entity.name - (entity.name.section | entity.name.tag | entity.name.label)",
             "foreground": "var(project_class_names)"
         },
         {
             "name": "Storage",
             "scope": "storage",
-            "foreground": "var(other_declarations)"
-        },
-        {
-            "name": "Function Storage",
-            "scope": "meta.function.declaration storage.type.function, storage.type.function keyword.declaration, storage.type.class keyword.declaration",
-            "foreground": "var(other_declarations)"
+            "foreground": "var(keywords)"
         },
         {
             "name": "Support Functions",
@@ -207,7 +143,7 @@
         {
             "name": "Support Constants",
             "scope": "support.constant, constant.language",
-            "foreground": "var(other_constants)",
+            "foreground": "var(keywords)",
             "font_style": "italic"
         },
         {
@@ -228,7 +164,7 @@
         {
             "name": "Variables in Strings",
             "scope": "string variable",
-            "foreground": "var(other_variables)"
+            "foreground": "var(plain_text)"
         },
         {
             "name": "Misc Punctuation",
@@ -242,7 +178,7 @@
         },
         {
             "name": "Integers",
-            "scope": "constant.numeric, constant.numeric punctuation.separator",
+            "scope": "constant.numeric",
             "foreground": "var(numbers)"
         },
         {
@@ -253,12 +189,12 @@
         {
             "name": "Tags",
             "scope": "entity.name.tag",
-            "foreground": "var(project_class_names)"
+            "foreground": "var(strings)"
         },
         {
             "name": "Attributes",
-            "scope": "entity.other.attribute-name, entity.other.attribute-name punctuation.definition",
-            "foreground": "var(project_method_names)"
+            "scope": "entity.other.attribute-name",
+            "foreground": "var(attributes)"
         },
         {
             "name": "Types",
@@ -271,19 +207,9 @@
             "foreground": "var(other_type_names)"
         },
         {
-            "name": "Types",
-            "scope": "entity.other support.type",
-            "foreground": "var(preprocessor_statements)"
-        },
-        {
-            "name": "Types",
-            "scope": "entity.other.pseudo-element, entity.other.pseudo-element punctuation.definition, entity.other.pseudo-class, entity.other.pseudo-class punctuation.definition",
-            "foreground": "var(preprocessor_statements)"
-        },
-        {
             "name": "Headings",
             "scope": "markup.heading",
-            "foreground": "var(heading)",
+            "foreground": "var(project_constants)",
             "font_style": "bold"
         },
         {
@@ -335,21 +261,21 @@
         {
             "name": "Inserted",
             "scope": "markup.inserted",
-            "foreground": "var(green)"
+            "foreground": "var(comments)"
         },
         {
             "name": "Deleted",
             "scope": "markup.deleted",
-            "foreground": "var(red)"
+            "foreground": "var(invalid)"
         },
         {
             "name": "Changed",
             "scope": "markup.changed",
-            "foreground": "var(yellow)"
+            "foreground": "var(attributes)"
         },
         {
             "name": "Colors",
-            "scope": "constant.other.color, constant.other.color punctuation.definition",
+            "scope": "constant.other.color",
             "foreground": "var(characters)"
         },
         {
@@ -375,19 +301,19 @@
         {
             "name": "Embedded Variable",
             "scope": "variable.interpolation",
-            "foreground": "var(other_variables)"
+            "foreground": "var(project_preprocessor_macros)"
         },
         {
             "name": "Illegal",
             "scope": "invalid.illegal",
-            "foreground": "var(invalid)",
-            "background": "color(var(invalid) blend(var(background) 50%))"
+            "foreground": "#FFF",
+            "background": "var(invalid)"
         },
         {
             "name": "Invalid deprecated",
             "scope": "invalid.deprecated",
-            "foreground": "var(invalid)",
-            "background": "color(var(invalid) blend(var(background) 50%))"
+            "foreground": "#FFF",
+            "background": "var(invalid)"
         },
         {
             "name": "Markdown Line Break",

@@ -294,11 +294,6 @@
             "foreground": "var(strings)"
         },
         {
-            "name": "Embedded",
-            "scope": "punctuation.section.embedded",
-            "foreground": "var(embedded)"
-        },
-        {
             "name": "Embedded Variable",
             "scope": "variable.interpolation",
             "foreground": "var(project_preprocessor_macros)"
